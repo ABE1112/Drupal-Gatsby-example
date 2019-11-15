@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
   <Layout>
    <h3>{Homepage.title}</h3>
    <div dangerouslySetInnerHTML={{ __html: Homepage.body.value}} />
-    <Link to="/about/">About</Link>
+
   </Layout>
 )
 }
@@ -26,13 +26,13 @@ export const query = graphql`
         edges {
           node {
             id
-            title
             body {
               value
             }
           }
         }
       }
+
     }
 `
 

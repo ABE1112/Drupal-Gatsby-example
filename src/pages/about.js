@@ -13,7 +13,6 @@ const AboutPage = ({data}) => {
   <Layout>
    <h3>{AboutPage.title}</h3>
    <div dangerouslySetInnerHTML={{ __html: AboutPage.body.value}} />
-    <Link to="/">Home</Link>
   </Layout>
 )
 }
@@ -26,7 +25,6 @@ export const query = graphql`
         edges {
           node {
             id
-            title
             body {
               value
             }
